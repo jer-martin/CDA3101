@@ -1,6 +1,6 @@
 .section .data
 
-helloMessage:	.asciz "hello world\n"
+helloMessage:	.asciz "jeremy loves sydney so much \n"
 
 .section .text
 
