@@ -5,7 +5,7 @@
  
 int main()
 {
-    char str[] = { "abbba" };
+    char str[] = { "abbba" }; // implement input
  
     // Start from leftmost and
     // rightmost corners of str
