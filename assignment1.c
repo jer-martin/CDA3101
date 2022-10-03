@@ -1,28 +1,28 @@
+// C implementation to check if a given
+// string is palindrome or not
 #include <stdio.h>
 #include <string.h>
-
-int main(){
-    char str[20];
-    int i, len;
-    int flag = 0;
-
-    printf("Enter a string:");
-    scanf("%s", str);
-
-    len = strlen(str);
-
-    for(i=0;i < len ;i++) {
-        if(str[i] != str[len-i-1]) {
-            flag = 1;
-            break;
+ 
+int main()
+{
+    char str[] = { "abbba" };
+ 
+    // Start from leftmost and
+    // rightmost corners of str
+    int l = 0;
+    int h = strlen(str) - 1;
+ 
+    // Keep comparing characters
+    // while they are same
+    while (h > l) {
+        if (str[l++] != str[h--]) {
+            printf("%s is not a palindrome\n", str);
+            return 0;
+            // will return from here
         }
     }
-
-    if (flag) {
-        printf("%s is not a palindrome", str);
-    }
-    else {
-        printf("%s is a palindrome", str);
-    }
+ 
+    printf("%s is a palindrome\n", str);
+ 
     return 0;
 }
